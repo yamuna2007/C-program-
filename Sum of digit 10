@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0, temp;
+
+    scanf("%d", &n);
+
+    // Check if number has more than 2 digits
+    if (n > 99) {
+        temp = n;
+        while (temp > 0) {
+            sum += temp % 10;  // Extract last digit and add to sum
+            temp /= 10;        // Remove last digit
+        }
+        printf("Sum of digit is %d\n", sum);
+    } else {
+        printf("Invalid Input\n");
+    }
+
+    return 0;
+}
